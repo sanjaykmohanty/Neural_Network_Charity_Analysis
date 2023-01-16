@@ -50,16 +50,13 @@ The dataset was separated in the appropriate target(y) and features(X) and split
 ![image](https://user-images.githubusercontent.com/31812730/212607765-7b417d8e-dd5d-4451-803e-aa3f5294c321.png)
 
 ### Compile, Train, and Evaluate the Model
-Continue using the AlphabetSoupCharity.ipynb file where you’ve already performed the preprocessing steps from Deliverable 1.
-Create a neural network model by assigning the number of input features and nodes for each layer using Tensorflow Keras.
-Create the first hidden layer and choose an appropriate activation function.
-If necessary, add a second hidden layer with an appropriate activation function.
-Create an output layer with an appropriate activation function.
-Check the structure of the model.
-Compile and train the model.
-Create a callback that saves the model's weights every 5 epochs.
-Evaluate the model using the test data to determine the loss and accuracy.
-Save and export your results to an HDF5 file, and name it AlphabetSoupCharity.h5.
+The initial model design included 80 neurons for the first hidden layer and 30 neurons for the second hidden layer. Both of these layers employed the "relu" activation function and the final output layer utilized the "sigmoid" function to classify the result as a 0 or 1 which was unsuccessful vs successful prediction.
+
+![image](https://user-images.githubusercontent.com/31812730/212609314-39e687ea-c8ad-4126-87c7-105764248b46.png)
+
+An evaluation was employed on the nural network design which resulted in a loss of about 74% and an accuracy score of about 55%. 
+
+![image](https://user-images.githubusercontent.com/31812730/212609816-e402f1f7-d266-483a-a76d-4369e86fd590.png)
 
 ### Optimize the Model
 

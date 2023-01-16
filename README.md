@@ -59,5 +59,36 @@ An evaluation was employed on the nural network design which resulted in a loss 
 ![image](https://user-images.githubusercontent.com/31812730/212609816-e402f1f7-d266-483a-a76d-4369e86fd590.png)
 
 ### Optimize the Model
+Additional adjustments were made to the model to imporove the performance of the model, an attempt to achive above 75% accuracy. 
+
+The results of the adjustments are shown below:
+
+**Attempt # 1**
+The first attempt was to check if dropping extra features would improve performance. Two features "USE_CASE_Other","AFFILIATION_Other" were dropped. 
+
+![image](https://user-images.githubusercontent.com/31812730/212611722-68c5b586-e23f-4e77-b52b-651fb6e521c3.png)
+
+This model design also included 80 neurons for the first hidden layer and 30 neurons for the second hidden layer. Both of these layers employed the "relu" activation function and the final output layer utilized the "sigmoid" function. 
+
+An evaluation was employed on the nural network design which resulted in a loss of about 58% and an accuracy score of about 73%. 
+
+![image](https://user-images.githubusercontent.com/31812730/212611601-41c7572f-af57-4df8-a303-bdd94b29a9f8.png)
+
+**Attempt # 2**
+The second attempt was to check if adding an additional hidden layer would improve performance. This model design also included 80 neurons for the first hidden layer, 30 neurons for the second hidden layer, and 15 neurons for the third hidden layer. All three layers employed the "relu" activation function and the final output layer utilized the "sigmoid" function. 
+
+An evaluation was employed on the nural network design which resulted in a loss of about 59% and an accuracy score of about 73%. 
+
+![image](https://user-images.githubusercontent.com/31812730/212612528-21a516b7-4620-4c4b-a90a-60e8c9f87ab0.png)
+
+**Attempt # 3**
+The third attempt was to check if using a different activation function would improve performance. This model design included 80 neurons for the first hidden layer, 30 neurons for the second hidden layer, and 15 neurons for the third hidden layer. All three layers employed the "tanh" activation function and the final output layer utilized the "sigmoid" function. 
+
+An evaluation was employed on the nural network design which resulted in a loss of about 56% and an accuracy score of about 73%. 
+
+![image](https://user-images.githubusercontent.com/31812730/212613039-2f990572-4264-4a63-9a00-52e0f2349200.png)
 
 ## Summary
+Deep neural network machine learning model produced an useful binary classifier in predicting whether funding an applicant would produce successful results. After dropping two features "USE_CASE_Other","AFFILIATION_Other" the model performance improved substantially. However, after adjusting the model three times, the predictive capability never reached above 75% accuracy. 
+
+Additional optimization techniques such as dropping more features or employing a different activation function needed to achive the required above 75% accuracy. 

@@ -7,7 +7,7 @@ The deep learning model performed supervised learning by training on the "featur
 
 ## Results
 ### Preprocessing Data for a Neural Network Model
-To begin with, data from the charity_data.csv was uploaded into a DataFrame and the data was analyzed. Two columns, "EIN" and "NAME", were dropped as they were found to be unuseful for predicting the success of a donation. 
+Data from the charity_data.csv was uploaded into a DataFrame and the data was analyzed. Two columns, "EIN" and "NAME", were dropped considering they were unuseful for predicting the success of a donation. 
 
 ![image](https://user-images.githubusercontent.com/31812730/212555713-26765d3f-e15a-4fe6-b210-293cbf12c0d5.png)
 
@@ -27,18 +27,27 @@ Below listed variables are considered the features for the model:
 - SPECIAL_CONSIDERATIONS—Special consideration for application
 - ASK_AMT—Funding amount requested
 
-Determine the number of unique values for each column.
-For those columns that have more than 10 unique values, determine the number of data points for each unique value.
-Create a density plot to determine the distribution of the column values.
-Use the density plot to create a cutoff point to bin "rare" categorical variables together in a new column, Other, and then check if the binning was successful.
-Generate a list of categorical variables.
-Encode categorical variables using one-hot encoding, and place the variables in a new DataFrame.
-Merge the one-hot encoding DataFrame with the original DataFrame, and drop the originals. At this point, your merged DataFrame should look like this:
+Number of unique values from each column was calculated as shown below:
 
+![image](https://user-images.githubusercontent.com/31812730/212602879-2f100421-70be-49a0-84c5-57650d11e4ef.png)
 
-Split the preprocessed data into features and target arrays.
-Split the preprocessed data into training and testing datasets.
-Standardize numerical variables using Scikit-Learn’s StandardScaler class, then scale the data.
+All the infrequent categorical values are clolapsed into a single "other" category. The value counts for "APPLICATION_TYPE" were determined as as shown below:
+
+![image](https://user-images.githubusercontent.com/31812730/212603364-cc79b352-8a41-4e53-a22b-d4cbddcdc3d4.png)
+
+The replace method was used to replace all of those values with "other" to reduce the number of unique values in the column.
+
+![image](https://user-images.githubusercontent.com/31812730/212604902-7cce48ae-ed98-44f0-9d63-e7fe72b6c954.png)
+
+The "one hot encoder" was used to create dummy variables and convert all features to numerical format. 
+
+![image](https://user-images.githubusercontent.com/31812730/212607140-e995589a-e982-4cef-a149-6fcbd399a37f.png)
+
+![image](https://user-images.githubusercontent.com/31812730/212607363-f9a6dd80-d6c4-42df-833b-b6431bc883c2.png)
+
+The dataset was separated in the appropriate target(y) and features(X) and split into training and testing sets. The feature data was scaled which altered each variable to have a mean value of zero and a standard deviation of one. 
+
+![image](https://user-images.githubusercontent.com/31812730/212607765-7b417d8e-dd5d-4451-803e-aa3f5294c321.png)
 
 ### Compile, Train, and Evaluate the Model
 Continue using the AlphabetSoupCharity.ipynb file where you’ve already performed the preprocessing steps from Deliverable 1.

@@ -92,3 +92,11 @@ An evaluation was employed on the neural network design which resulted in a loss
 Deep neural network machine learning model produced an useful binary classifier in predicting whether funding an applicant would produce successful results. After dropping two features "USE_CASE_Other", "AFFILIATION_Other" the model performance improved substantially. However, after adjusting the model three times, the predictive capability never reached above 75% accuracy. 
 
 Additional optimization techniques such as dropping more features or employing a different activation function needed to achieve the required above 75% accuracy.
+
+Neural networks are not the only machine learning method available. There are several alternatives exist, these alternatives may provide better performances.
+
+Here are some of the alternatives:
+- **Random forests** consist of an ensemble of decision trees, each trained with a random subset of the training dataset. This method corrects a decision tree’s tendency to overfit the input data
+- **Support vector machines** attempt to map the input data into a space where it is linearly separable into different categories
+- **k-nearest neighbors algorithm (KNN)** looks for the values in the training dataset that are closest to a new input, and combines the target variables associated with those nearest neighbors into a new prediction
+**Symbolic regression** technique tries to find explicit mathematical formulas that connect the input variables to the target variable

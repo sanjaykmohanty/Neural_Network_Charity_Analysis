@@ -99,4 +99,4 @@ Here are some of the alternatives:
 - **Random forests** consist of an ensemble of decision trees, each trained with a random subset of the training dataset. This method corrects a decision tree’s tendency to overfit the input data
 - **Support vector machines** attempt to map the input data into a space where it is linearly separable into different categories
 - **k-nearest neighbors algorithm (KNN)** looks for the values in the training dataset that are closest to a new input, and combines the target variables associated with those nearest neighbors into a new prediction
-**Symbolic regression** technique tries to find explicit mathematical formulas that connect the input variables to the target variable
+- **Symbolic regression** technique tries to find explicit mathematical formulas that connect the input variables to the target variable
